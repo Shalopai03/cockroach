@@ -1,0 +1,31 @@
+class tarakan extends Thread{ 
+    String my_name;
+    int z;
+    String my_sleep;
+    int q;
+public void run(){  
+    for (int j=0; j<z;j++)
+    for (int l=0; l<q;l++){
+System.out.println("im " +my_name); 
+try{Thread.sleep();}catch(InterruptedException e)
+        {System.out.println(e);}   
+    }
+}  
+public static void main(String args[]){  
+tarakan t1=new tarakan(); 
+t1.my_name="cockroach 1";
+t1.z=4;
+t1.q=2000;
+tarakan t2=new tarakan();  
+t2.my_name="cockroach 2";
+t2.z=2;
+t2.q=100;
+tarakan t3=new tarakan();  
+t3.my_name="cockroach 3";
+t3.z=5;
+t3.q=5000;
+t1.start();
+t2.start();
+t3.start();
+ }  
+} 
